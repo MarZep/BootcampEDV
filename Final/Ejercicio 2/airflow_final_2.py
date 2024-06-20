@@ -35,6 +35,7 @@ with DAG(
     trigger_hijo = TriggerDagRunOperator(
         task_id="trigger_hijo",
         trigger_dag_id="Hijo-ejercicio-final-2",
+        execution_date = '{{ ds }}',
         reset_dag_run = True
     )
 
